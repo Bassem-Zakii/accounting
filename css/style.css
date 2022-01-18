@@ -1,0 +1,292 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.g-container {
+  width: 100%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+@media (min-width: 576px) {
+  .g-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .g-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .g-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .g-container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .g-container {
+    max-width: 1320px;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  min-height: 100vh;
+  position: relative;
+}
+
+header {
+  padding: 6px 0;
+  -webkit-box-shadow: 0 0 14px -4px #555;
+          box-shadow: 0 0 14px -4px #555;
+  background-color: #fff;
+}
+
+header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .wrapper .logo {
+  width: 100px;
+}
+
+header .wrapper .logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .wrapper nav .nav-btn {
+  display: none;
+}
+
+header .wrapper nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .wrapper nav ul li {
+  margin: 0 5px;
+}
+
+header .wrapper nav ul li a {
+  font-size: 0.9rem;
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+header .wrapper nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  border-radius: 5px;
+  display: block;
+  background-color: #000;
+  -webkit-transition: width 0.2s ease;
+  transition: width 0.2s ease;
+}
+
+header .wrapper nav ul li.active a::after, header .wrapper nav ul li:hover a::after {
+  width: 100%;
+}
+
+header .wrapper nav ul .contact {
+  margin: 0 0 0 5px;
+}
+
+header .wrapper nav ul .contact a {
+  background-color: #000;
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-size: 0.9rem;
+  padding: 8px 15px;
+  border-radius: 5px;
+  display: block;
+  border: 1px solid #000;
+}
+
+header .wrapper nav ul .contact a::after {
+  display: none;
+}
+
+header .wrapper nav ul .contact.active a, header .wrapper nav ul .contact:hover a {
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
+}
+
+header .wrapper nav ul .contact.active a::after, header .wrapper nav ul .contact:hover a::after {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header .wrapper nav .nav-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    cursor: pointer;
+  }
+  header .wrapper nav .nav-btn span {
+    display: block;
+    background-color: #000;
+    width: 24px;
+    height: 3px;
+    margin: 3px 0;
+    border-radius: 10px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  header .wrapper nav .nav-btn span:nth-child(2) {
+    width: 18px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  header .wrapper nav .nav-btn.active {
+    height: 27px;
+  }
+  header .wrapper nav .nav-btn.active span {
+    background-color: #a51313;
+    margin: -2px auto;
+    border-radius: 10px;
+  }
+  header .wrapper nav .nav-btn.active span:first-child {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  header .wrapper nav .nav-btn.active span:nth-child(2) {
+    display: none;
+  }
+  header .wrapper nav .nav-btn.active span:last-child {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  header .wrapper nav ul {
+    position: absolute;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 14px -6px #555;
+            box-shadow: 0 6px 14px -6px #555;
+    left: -100%;
+    top: 50px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    bottom: 0;
+    min-width: 200px;
+    padding: 10px 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  header .wrapper nav ul li {
+    margin: 0;
+    width: 100%;
+  }
+  header .wrapper nav ul li a {
+    padding: 10px 5px;
+    background-color: #fff;
+  }
+  header .wrapper nav ul li a::after {
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    height: 100%;
+  }
+  header .wrapper nav ul li.active a, header .wrapper nav ul li:hover a {
+    padding: 10px 5px 10px 10px;
+  }
+  header .wrapper nav ul li.active a::after, header .wrapper nav ul li:hover a::after {
+    width: 5px;
+  }
+  header .wrapper nav ul .contact {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header .wrapper nav ul .contact a {
+    text-align: center;
+    margin: 10px 5px 0 5px;
+    border: 1px solid #000;
+  }
+  header .wrapper nav ul .contact.active a, header .wrapper nav ul .contact:hover a {
+    border: 1px solid #000;
+    background-color: #fff;
+    color: #000;
+  }
+  header .wrapper nav ul.active {
+    left: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
